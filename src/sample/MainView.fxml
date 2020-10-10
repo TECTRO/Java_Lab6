@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400" minWidth="800" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <center>
+            <BorderPane>
+                <center>
+                    <TextArea promptText="Хранимая коллекция" fx:id="ArrayViewArea" editable="false" focusTraversable="false" style=" -fx-focus-color: rgba(255,255,255,0); -fx-faint-focus-color: rgba(255,255,255,0);" wrapText="true">
+                        <BorderPane.margin>
+                            <Insets left="5" right="5" top="5" />
+                        </BorderPane.margin>
+                    </TextArea>
+                </center>
+                <bottom>
+                    <BorderPane>
+                        <center>
+                            <TextArea promptText="Введите несколько записываемых значений" fx:id="RawArrayInputArea" focusTraversable="false" prefHeight="20" wrapText="true">
+                                <BorderPane.margin>
+                                    <Insets bottom="5" left="5" top="5" />
+                                </BorderPane.margin>
+                            </TextArea>
+                        </center>
+                        <right>
+                            <VBox alignment="CENTER">
+                                <Button onMouseClicked="#OnAdd" prefHeight="20" prefWidth="100" text="Добавить">
+                                    <VBox.margin>
+                                        <Insets left="5" right="5" top="5" />
+                                    </VBox.margin>
+                                </Button>
+                                <Button onMouseClicked="#OnReplace" prefHeight="20" prefWidth="100" text="Заменить">
+                                    <VBox.margin>
+                                        <Insets left="5" right="5" top="5" />
+                                    </VBox.margin>
+                                </Button>
+                                <Button onMouseClicked="#OnRemove" prefHeight="20" prefWidth="100" text="Удалить">
+                                    <VBox.margin>
+                                        <Insets left="5" right="5" top="5" />
+                                    </VBox.margin>
+                                </Button>
+                                <Button onMouseClicked="#OnClear" prefHeight="20" prefWidth="100" text="Очистить">
+                                    <VBox.margin>
+                                        <Insets bottom="5" left="5" right="5" top="5" />
+                                    </VBox.margin>
+                                </Button>
+                            </VBox>
+                        </right>
+                    </BorderPane>
+                </bottom>
+            </BorderPane>
+        </center>
+        <right>
+            <BorderPane>
+                <BorderPane.margin>
+                    <Insets bottom="5" right="5" top="5" />
+                </BorderPane.margin>
+                <center>
+                    <ListView fx:id="ResultViewArea" focusTraversable="false" />
+                </center>
+                <bottom>
+                    <HBox >
+                        <BorderPane.margin>
+                            <Insets bottom="5" top="5" />
+                        </BorderPane.margin>
+                        <Label text="Всего">
+                            <HBox.margin>
+                                <Insets right="5"  />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="ResultItemsCountInfo" />
+                    </HBox>
+                </bottom>
+            </BorderPane>
+        </right>
+
+
+    </BorderPane>
+</AnchorPane>
